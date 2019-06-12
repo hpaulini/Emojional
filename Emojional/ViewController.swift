@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let emojis = ["🤗": "happy", "😴": "tired", "🤒": "sick", "🥳": "celebratory", "🤠": "adventurous", "😥": "sad"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +19,8 @@ class ViewController: UIViewController {
 
     @IBAction func showMessage(sender: UIButton){
         //when a user clicks a button, a message pops up that the user can then press 'OK' to exit from the message. Then the user can select another button
-        let alertController = UIAlertController(title: "We All Get EMOJIonal", message: "Hello", preferredStyle: UIAlertController.Style.alert)
+        let selectedEmotion = sender.titleLabel?.text
+        let alertController = UIAlertController(title: "We All Get EMOJIonal", message: emojis[selectedEmotion!], preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         present(alertController, animated: true, completion: nil)
     }
