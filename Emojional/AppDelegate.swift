@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Emojional
 //
-//  Created by Helen on 6/11/19.
-//  Copyright © 2019 Helen. All rights reserved.
+//  Created by Helen Paulini on 6/11/19.
+//  Copyright © 2019 Helen Paulini. All rights reserved.
 //
 
 import UIKit
